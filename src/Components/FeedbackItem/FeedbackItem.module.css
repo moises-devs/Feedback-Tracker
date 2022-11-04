@@ -1,0 +1,32 @@
+.container {
+    position:relative;
+    width:100%;
+    height:100%;
+    font-size:2rem;
+
+}
+.rate-icon {
+    position:absolute;
+    color:white;
+    background:#f8bb37;
+    border-radius:50%;
+    top: -5rem;
+    left:-5%;
+    width:4rem;
+    height:4rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rate-icon span {
+    font-size:2rem;
+}
+
+.actionBtns {
+    position:absolute;
+    right:0;
+    top:-5%;
+}
+.actionBtns button {
+    margin: 0 .5rem;
+}
