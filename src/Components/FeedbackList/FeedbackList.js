@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import FeedbackSummary from "../FeedbackSummary/FeedbackSummary";
 import FeedbackItem from "../FeedbackItem/FeedbackItem";
-import style from "./FeedbackList.module.css";
-const arr = [{text:'this is feedback', rating: 8, id:Math.random()},
-{text:'this is feedback', rating: 8, id:Math.random()},
-{text:'this is feedback', rating: 8, id:Math.random()}]
+import { ReviewCtx } from '../../Context/ReviewProvider';
 
 const FeedbackList = () => {
+  const reviewCtx = useContext(ReviewCtx);
   return (
     <>
     <FeedbackSummary/>
-    {arr.map(item => <FeedbackItem key={item.id} text={item.text} rating={item.rating}/>)}
+    {reviewCtx.reviewState.reviews.map(item => <FeedbackItem key={item.id} text={item.text} id={item.id} rating={item.rating}/>)}
     </>
   );
 };

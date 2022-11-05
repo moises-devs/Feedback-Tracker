@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ReviewCtx } from '../../Context/ReviewProvider'
 import style from "./FeedbackSummary.module.css"
 const FeedbackSummary = () => {
+  const reviewCtx = useContext(ReviewCtx);
   return (
     <div className={style.container}>
-        <p> 3 reviews </p>
-        <p>Average Rating: 8.5</p> 
+        <p> {reviewCtx.reviewState.reviews.length} reviews </p>
+        <p>Average Rating: {`${reviewCtx.reviewState.average.toFixed(2) || 0 }`}</p> 
     </div>
   )
 }

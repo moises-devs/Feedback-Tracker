@@ -1,27 +1,34 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState, useContext, useEffect } from "react";
 import style from "./FeedbackBoard.module.css";
 import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
 import { ReviewCtx } from "../../Context/ReviewProvider";
 const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const FeedbackBoard = () => {
-  const [rate, setRate] = useState("");
+  const inputRef = useRef();
+  const [rate, setRate] = useState(null);
   const [validInput, setValidInput] = useState(false);
   const [inputTouched, setInputTouched] = useState(false);
-  const inputRef = useRef();
-  const reviewCtx = useContext(ReviewCtx);
+  const { reviewState, addReview } = useContext(ReviewCtx);
+  const { editingReview } = reviewState;
+  useEffect(() => {
+    if (editingReview) {
+      inputRef.current.value = editingReview.text;
+      setRate(editingReview.rating);
+      setValidInput(true);
+    }
+  }, [editingReview]);
 
   const addReviewHandler = (e) => {
     e.preventDefault();
+    let review;
     let id = Math.random();
-    const review = {
+    review = {
       text: inputRef.current.value,
       rating: rate,
-      id: id
+      id: id,
     };
-    reviewCtx.addReview(review);
-    console.log(review);
-
+    addReview(review);
     inputRef.current.value = "";
     setInputTouched(false);
     setRate("");
@@ -33,7 +40,8 @@ const FeedbackBoard = () => {
     setInputTouched(true);
     if (enteredText.trim().length >= 10) {
       setValidInput(true);
-    } else {
+    }
+    else {
       setValidInput(false);
     }
   };
@@ -42,15 +50,16 @@ const FeedbackBoard = () => {
     setRate(rate);
   };
 
-  console.log(reviewCtx.reviews);
+  let errorStatement = `${!rate ? "Please select a rating." : ""}  ${
+    !validInput ? "Please enter a comment with atleast 10 characters." : ""
+  }`;
 
-  let errorStatement = `${!rate ? 'Please select a rating.' : ''}  ${!validInput ? 'Please enter a comment with atleast 10 characters.' : '' }`;
   return (
     <Card>
       <div className={style.wrapper}>
         <h2> How would you rate your service with us?</h2>
         <ol>
-          {numArr.map( index => (
+          {numArr.map((index) => (
             <li key={index}>
               <Button rate={rate} num={index} onButtonHandler={buttonHandler} />
             </li>
@@ -71,8 +80,7 @@ const FeedbackBoard = () => {
             id="review"
           />
           <button type="submit" disabled={!validInput || !rate}>
-            {" "}
-            Send{" "}
+            Send
           </button>
         </form>
       </div>

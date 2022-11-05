@@ -6,11 +6,6 @@ const Header = (props) => {
     <header className={styles.header}>
         <h1>Feedback Made Easy </h1>
     </header>
-    <main className={styles.container}>
-        <div className={styles.sectionwrapper}>
-          {props.children}
-        </div>
-    </main>
     </>
   )
 }

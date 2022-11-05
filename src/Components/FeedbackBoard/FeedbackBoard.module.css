@@ -57,6 +57,7 @@
 .form-control-wrapper button:disabled {
     background:gainsboro;
     color:black;
+    cursor:not-allowed;
 }
 
 @media (min-width:700px) {
