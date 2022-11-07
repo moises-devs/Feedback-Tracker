@@ -5,6 +5,7 @@
     color:white;
     width:70%;
     font-size:1.8rem;
+    max-width:500px;
 }
 
 @media (min-width:700px) {

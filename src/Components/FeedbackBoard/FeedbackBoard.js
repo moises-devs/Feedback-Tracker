@@ -73,6 +73,7 @@ const FeedbackBoard = () => {
           onSubmit={addReviewHandler}
         >
           <label htmlFor="review"></label>
+          <div className={style['control-wrapper']}>
           <input
             ref={inputRef}
             onChange={validtyHandler}
@@ -82,6 +83,7 @@ const FeedbackBoard = () => {
           <button type="submit" disabled={!validInput || !rate}>
             Send
           </button>
+          </div>
         </form>
       </div>
     </Card>

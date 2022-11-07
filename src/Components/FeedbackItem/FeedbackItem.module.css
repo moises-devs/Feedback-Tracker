@@ -5,17 +5,13 @@
     font-size:2rem;
 
 }
-.container p {
-    word-wrap:break-word;
-    width:80%;
-}
 .rate-icon {
     position:absolute;
     color:white;
     background:#f8bb37;
     border-radius:50%;
-    top: -5rem;
-    left:-5%;
+    top: -6rem;
+    left:-5rem;
     width:4rem;
     height:4rem;
     display:flex;
@@ -28,8 +24,8 @@
 
 .actionBtns {
     position:absolute;
-    right:0;
-    top:-5%;
+    right:-2rem;
+    top:-3.5rem;
 }
 .actionBtns button {
     margin: 0 .5rem;

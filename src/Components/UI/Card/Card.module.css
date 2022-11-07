@@ -1,6 +1,8 @@
 .card {
     background:white;
     border-radius:1.5rem;
-    margin:2rem;
-    min-width:300px;
+    margin:3rem;
+    padding:3rem;
+    width:70%;
+    max-width:500px;
 }
