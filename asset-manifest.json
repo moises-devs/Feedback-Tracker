@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/moises-devs/Feedback-Tracker/static/css/main.a59cccaf.css",
+    "main.js": "/moises-devs/Feedback-Tracker/static/js/main.709aefa2.js",
+    "index.html": "/moises-devs/Feedback-Tracker/index.html",
+    "main.a59cccaf.css.map": "/moises-devs/Feedback-Tracker/static/css/main.a59cccaf.css.map",
+    "main.709aefa2.js.map": "/moises-devs/Feedback-Tracker/static/js/main.709aefa2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a59cccaf.css",
+    "static/js/main.709aefa2.js"
+  ]
+}
