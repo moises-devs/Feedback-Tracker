@@ -6,7 +6,7 @@ const FeedbackSummary = () => {
   return (
     <div className={style.container}>
         <p> {reviewCtx.reviewState.reviews.length} reviews </p>
-        <p>Average Rating: {`${reviewCtx.reviewState.average.toFixed(2) || 0 }`}</p> 
+        <p>Average Rating: {`${isNaN(reviewCtx.reviewState.average) ? 0 : +reviewCtx.reviewState.average.toFixed(2) }`}</p> 
     </div>
   )
 }
