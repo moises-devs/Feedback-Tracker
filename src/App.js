@@ -11,7 +11,7 @@ function App() {
     <Header/>
     <BgLayer>
     <Routes>
-      <Route path="/" element={
+      <Route path="/moises-devs/Feedback-Tracker" element={
       <>
         <FeedbackBoard />
         <FeedbackList />
