@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/moises-devs/Feedback-Tracker/static/css/main.a59cccaf.css",
-    "main.js": "/moises-devs/Feedback-Tracker/static/js/main.f8e4a310.js",
+    "main.js": "/moises-devs/Feedback-Tracker/static/js/main.a3121d1e.js",
     "index.html": "/moises-devs/Feedback-Tracker/index.html",
     "main.a59cccaf.css.map": "/moises-devs/Feedback-Tracker/static/css/main.a59cccaf.css.map",
-    "main.f8e4a310.js.map": "/moises-devs/Feedback-Tracker/static/js/main.f8e4a310.js.map"
+    "main.a3121d1e.js.map": "/moises-devs/Feedback-Tracker/static/js/main.a3121d1e.js.map"
   },
   "entrypoints": [
     "static/css/main.a59cccaf.css",
-    "static/js/main.f8e4a310.js"
+    "static/js/main.a3121d1e.js"
   ]
 }
